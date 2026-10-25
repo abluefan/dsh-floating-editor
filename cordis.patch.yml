@@ -1,0 +1,8 @@
+# dsh-floating-editor 自带的 bundle patch
+#
+# ⚠ 本包用 insert 行挂载，所以**不要**把包名加进 dsh.profile.bundles ——
+#   那样同一个 id 会被插两次 ⇒ duplicate loader entry id ⇒ boot 直接死。
+#   （沿用全局指令文件里 font-picker / time-context 的同一套约定）
+- insert:
+    - id: floating-editor
+      name: 'dsh-floating-editor'

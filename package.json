@@ -1,0 +1,41 @@
+{
+  "name": "dsh-floating-editor",
+  "version": "0.2.0",
+  "description": "可拖动、可调透明度与字体的浮窗文本编辑器：读写文件、行号、空白字符可视化、调用 Notepad++。0.2.1 迁移版。",
+  "private": true,
+  "type": "module",
+  "main": "./index.js",
+  "engines": {
+    "dsh": ">=0.2.1-rc.2"
+  },
+  "exports": {
+    ".": {
+      "default": "./index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "cordis.patch.yml"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@codemirror/commands": "^6.11.1",
+    "@codemirror/state": "^6.7.6",
+    "@codemirror/view": "^6.43.13",
+    "esbuild": "^0.28.2"
+  }
+}
